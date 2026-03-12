@@ -6,6 +6,9 @@ require('dotenv').config();
 const app = express();
 const PORT = process.env.PORT || 5000;
 
+// Trust proxy - Required for Vercel deployment
+app.set('trust proxy', 1);
+
 // CORS Configuration - Allow all origins
 const corsOptions = {
   origin: '*',
